@@ -1,0 +1,43 @@
+@use "sass:math";
+
+html {
+  font-size: 1vw;
+}
+
+$design-width: 1280;
+$design-width-t: 768;
+$design-width-ms: 320;
+
+@function rez($px) {
+  @return #{math.div($px, math.div($design-width, 100))}rem;
+}
+
+@function rez-t($px) {
+  @return #{math.div($px, math.div($design-width-t, 100))}rem;
+}
+
+@function rez-m($px) {
+  @return #{math.div($px, math.div($design-width-ms, 100))}rem;
+}
+
+$tablet: 1280px;
+$portrait: 768px;
+$mobile: 540px;
+
+@mixin media-t {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin media-p {
+  @media screen and (max-width: $portrait) {
+    @content;
+  }
+}
+
+@mixin media-m {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
