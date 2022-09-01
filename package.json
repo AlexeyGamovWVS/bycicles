@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-	"scripts": {
+  "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve"
   },
@@ -36,6 +36,7 @@
     "webpack-dev-server": "^4.10.1"
   },
   "dependencies": {
-    "core-js": "^3.25.0"
+    "core-js": "^3.25.0",
+    "gsap": "^3.11.0"
   }
 }

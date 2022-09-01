@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,32 +20,44 @@
 <body class="body">
 	<header class="header">
 		<div class="container header__container">
-			<a href="/" class="header__logo-box">
-        <img
-          src="<%=require('./images/logo-black.svg')%>"
-          alt="Логтип «Место."
-          class="logo header__logo"
-        />
+			<a href="/" class="header__logo-box hover-transition">
+        <div class="header__logo"></div>
       </a>
+			<nav class="header__nav">
+				<ul class="header__nav-list">
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link hover-transition">Покрытия и градиенты</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link hover-transition">Велосипеды</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link hover-transition">Тренировки</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<nav class="header__nav">
-			<ul class="header__nav-list">
-				<li class="header__nav-item">
-					<a href="#" class="header__nav-link">Покрытия и градиенты</a>
-				</li>
-				<li class="header__nav-item">
-					<a href="#" class="header__nav-link">Велосипеды</a>
-				</li>
-				<li class="header__nav-item">
-					<a href="#" class="header__nav-link">Тренировки</a>
-				</li>
-			</ul>
-		</nav>
 	</header>
 
 	<main class="main"></main>
 		<section class="section hero">
-			
+			<div class="container hero__container">
+				<div class="hero__content-box">
+					<h1 class="hero__title fade-in-up">Шоссе, ТТ и&nbsp;Грэвел</h1>
+					<div class="hero__images-box">
+						<div class="hero__bike-fix fade-in">
+							<img src="<%=require('./images/byc-sh-02.jpg')%>" alt="Cannondale bycicle" class="hero__bike-img">
+						</div>
+						<img src="<%=require('./images/hero-image.jpg')%>" alt="Велосипедист на лесной тропе в горах." class="hero__cover fade-in">
+					</div>
+					<p class="hero__subtitle fade-in-up">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+					<button type="button" class="button hero__button fade-in-up">Подробнее</button>
+					<div class="hero__underline-box fade-in-up">
+						<p class="hero__additional-text">Cannondale Systemsix</p>
+						<div class="hero__line"></div>
+					</div>
+				</div>				
+			</div>
 		</section>
 	<footer class="footer"></footer>
 </body>

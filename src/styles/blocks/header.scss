@@ -1,0 +1,49 @@
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 999998;
+	background-color: $bg;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+	
+	&__container {
+		padding: rez(20) 0;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo-box {
+		height: rez(40);
+		&:hover {
+			opacity: .75;
+		}
+	}
+
+	&__logo {
+		height: 100%;
+		width: rez(120);
+		background-image: url(../../images/logo-black.svg);
+		background-size: contain;
+		background-position: left;
+		background-repeat: no-repeat;
+	}
+
+	&__nav-list {
+		display: flex;
+		flex-direction: row;
+		column-gap: rez(34);
+	}
+
+	&__nav-link {
+		font-weight: 500;
+		font-size: rez(14);
+		line-height: rez(18);
+		text-align: right;
+		color: $black15;
+		text-decoration: none;
+		&:hover {
+			opacity: .75;
+		}
+	}
+}

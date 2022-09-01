@@ -1,10 +1,82 @@
 @import "../utils/utils.scss";
+@import "../blocks/header.scss";
 
 .body {
 	min-width: 320px;
+	background-color: $bg;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	@extend %bodyFont;
+}
+
+%titles {
+	color: $black15;
+	font-weight: 700;
+	font-size: rez(55);
+	line-height: rez(60);
+	letter-spacing: rez(-0.5);
+}
+
+%text {
+	color: $gray22;
+	font-weight: 400;
+	font-size: rez(18);
+	line-height: rez(28);
+	opacity: 0.7;
+}
+
+%darkText {
+	color: $black15;
+	font-weight: 400;
+	font-size: rez(18);
+	line-height: rez(18);
 }
 
 .logo {
+}
+.section {
+}
+
+.button {
+	background-color: $primary;
+	color: white;
+	font-weight: 600;
+	font-size: rez(14);
+	line-height: rez(18);
+	text-align: center;
+	letter-spacing: rez(1);
+	padding: rez(16) rez(10);
+	border: none;
+	border-radius: rez(4);
+	min-width: rez(180);
+	width: fit-content;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(-100%);
+		height: 100%;
+		width: 100%;
+		background-color: $green-dark;
+		z-index: -1;
+		transition: .4s ease-in-out;
+	}
+
+	&:hover::before {
+		transform: translateX(0);
+	}
 }
 
 .container {
@@ -12,20 +84,95 @@
 	margin: 0 auto;
 }
 
-.header {
+.main {
+}
+
+.hero {
+	position: relative;
 	&__container {
-		padding: rez(20);
+		padding-top: rez(160);
+		z-index: 2;
 	}
-	&__logo-box {
+
+	&__content-box {
+		display: flex;
+		flex-direction: column;
+		max-width: rez(460);
 	}
-	&__logo {
+	&__title {
+		margin-bottom: rez(50);
+		@extend %titles;
 	}
-	&__nav {
+	&__subtitle {
+		margin-bottom: rez(50);
+		@extend %text;
 	}
-	&__nav-list {
+	&__underline-box {
+		margin-top: rez(168);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: rez(30);
 	}
-	&__nav-item {
+	&__additional-text {
+		@extend %darkText;
 	}
-	&__nav-link {
+	&__line {
+		height: rez(2);
+		width: rez(132);
+		background-color: $grayC7;
+	}
+
+	&__images-box {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&__bike-fix {
+		width: rez(440);
+		height: rez(300);
+		display: flex;
+		box-shadow: rez(-20) rez(60) rez(220) rgba(0, 0, 0, 0.14);
+		background-color: $bg;
+		border-radius: 20px;
+		position: absolute;
+		top: rez(347);
+		right: rez(360);
+	}
+	&__bike-img {
+		margin: auto;
+		height: 100%;
+	}
+
+	&__cover {
+		height: 100vh;
+		margin-top: rez(80);
+		min-height: rez(836);
+		top: 0;
+		right: 0;
+	}
+}
+
+.footer {
+	height: 200vh;
+}
+
+.fade-in-up {
+	opacity: 0;
+	transform: translateY(50px);
+	transition: all .3s ease-out;
+
+	&_visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	opacity: 0;
+	transition: opacity .3s ease-out;
+	&_visible {
+		opacity: 1;
 	}
 }
