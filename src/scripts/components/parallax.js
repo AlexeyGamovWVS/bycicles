@@ -8,7 +8,7 @@ gsap.to('.hero__bike-fix', {
 	scrollTrigger: {
 		trigger: '.hero__bike-fix',
 		start: '20% center',
-		end: '80% center',
+		end: '60% center',
 		markers: false,
 		scrub: false,
 		pin: true,

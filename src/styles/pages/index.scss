@@ -2,6 +2,7 @@
 @import "../blocks/header.scss";
 @import "../blocks/button.scss";
 @import "../blocks/hero.scss";
+@import "../blocks/blockquote.scss";
 
 .body {
 	min-width: 320px;
@@ -19,7 +20,7 @@
 
 %titles {
 	color: $black15;
-	font-weight: 700;
+	font-weight: 900;
 	font-size: rez(55);
 	line-height: rez(60);
 	letter-spacing: rez(-0.5);
@@ -40,12 +41,18 @@
 	line-height: rez(18);
 }
 
+%quote {
+	color: $black15;
+	font-weight: 500;
+	font-size: rez(34);
+	line-height: rez(44);
+	letter-spacing: rez(-0.5);
+}
+
 .logo {
 }
 .section {
 }
-
-
 
 .container {
 	max-width: rez(1200);
@@ -56,6 +63,5 @@
 }
 
 .footer {
-
+	height: rez(1000);
 }
-

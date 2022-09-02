@@ -1,5 +1,7 @@
 .hero {
 	position: relative;
+	height: fit-content;
+	min-height: rez(836);
 	&__container {
 		padding-top: rez(160);
 		z-index: 2;
@@ -57,10 +59,8 @@
 	}
 
 	&__cover {
-		height: 100vh;
-		margin-top: rez(80);
-		min-height: rez(836);
-		top: 0;
+		height: rez(836);
+		top: rez(80);
 		right: 0;
 	}
 }
