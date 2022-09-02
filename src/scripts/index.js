@@ -5,6 +5,7 @@ import { setUpFadeInUpAnima } from "./components/fadeInUp";
 import { setUpFadeInAnima } from "./components/fadeIn";
 import { Slider } from "./components/slider";
 import { Tabs } from "./components/tabs";
+import { Validate } from "./components/validation";
 
 const textSlider = new Slider('.roads__text-slider', '.roads__button_type_next', '.roads__button_type_prev', 1000, 1);
 const photoSlider = new Slider('.roads__slider-corusel', '.roads__button_type_next', '.roads__button_type_prev', 1000, 2);
