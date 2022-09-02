@@ -97,7 +97,7 @@
 		</section>
 
 		<section class="section roads">
-			<div class="container roads__container">
+			<article class="container roads__container">
 				<div class="roads__text-slider swiper">
 					<div class="roads__text-wrapper swiper-wrapper">
 						<div class="roads__text-slide swiper-slide">
@@ -173,7 +173,7 @@
 						class="roads__button roads__button_type_next hover-transition"
 					></button>
 				</div>
-			</div>
+			</article>
 		</section>
 
 		<section class="section cycles">
@@ -186,52 +186,136 @@
 						<li class="cycles__filter hover-transition">TT</li>
 					</ul>
 				</div>
-				
+
 				<ul class="cycles__cards">
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-sh-01.jpg')%>" alt="Cervelo Caledonia-5." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-sh-01.jpg')%>"
+								alt="Cervelo Caledonia-5."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Cervelo Caledonia-5</p>
 					</li>
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-sh-02.jpg')%>" alt="Cannondale Systemsix Himod." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-sh-02.jpg')%>"
+								alt="Cannondale Systemsix Himod."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Cannondale Systemsix Himod</p>
 					</li>
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-sh-03.jpg')%>" alt="Trek Domane SL-7." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-sh-03.jpg')%>"
+								alt="Trek Domane SL-7."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Trek Domane SL-7</p>
 					</li>
 				</ul>
 
 				<ul class="cycles__cards">
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-gr-01.jpg')%>" alt="Cervelo Aspero GRX 810." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-gr-01.jpg')%>"
+								alt="Cervelo Aspero GRX 810."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Cervelo Aspero GRX 810</p>
 					</li>
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-gr-02.jpg')%>" alt="Specialized S-Works Diverge." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-gr-02.jpg')%>"
+								alt="Specialized S-Works Diverge."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Specialized S-Works Diverge</p>
 					</li>
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-gr-03.jpg')%>" alt="Cannondale Topstone Lefty 3." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-gr-03.jpg')%>"
+								alt="Cannondale Topstone Lefty 3."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Cannondale Topstone Lefty 3</p>
 					</li>
 				</ul>
 
 				<ul class="cycles__cards">
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-tt-01.jpg')%>" alt="Specialized S-Works Shiv." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-tt-01.jpg')%>"
+								alt="Specialized S-Works Shiv."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Specialized S-Works Shiv</p>
 					</li>
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-tt-02.jpg')%>" alt="BMC Timemachine 01 ONE." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-tt-02.jpg')%>"
+								alt="BMC Timemachine 01 ONE."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">BMC Timemachine 01 ONE</p>
 					</li>
-					<li class="card">
-						<div class="card__img-box"><img src="<%=require('./images/byc-tt-03.jpg')%>" alt="Cervelo P-Series." class="card__img"></div>
+					<li class="card hover-transition">
+						<div class="card__img-box">
+							<img
+								src="<%=require('./images/byc-tt-03.jpg')%>"
+								alt="Cervelo P-Series."
+								class="card__img"
+							/>
+						</div>
 						<p class="card__name">Cervelo P-Series</p>
 					</li>
 				</ul>
 			</div>
+		</section>
+
+		<section class="section training">
+			<article class="container training__container">
+				<div class="training__content">
+					<div class="training__content-box">
+						<h2 class="training__title fade-in-up">Тренировки</h2>
+						<p class="training__subtitle fade-in-up">
+							Чтобы найти маршрут для тренировки можно воспользоваться сервисом
+							Komoot, а записать эти тренировки поможет приложение Strava, а
+							также это приложение позволит построить тренировочный план.
+						</p>
+					</div>
+					<ul class="training__links fade-in-up">
+						<li class="training__item">
+							<a href="" class="training__link hover-transition">Strava</a>
+						</li>
+						<li class="training__item">
+							<a href="" class="training__link hover-transition">Komoot</a>
+						</li>
+					</ul>
+				</div>
+				<div class="training__img-box">
+					<img
+						class="training__img fade-in-up"
+						src="<%=require('./images/training-image.jpg')%>"
+						alt="Дорога для велотренировок между лесными просеками."
+					/>
+				</div>
+			</article>
 		</section>
 
 		<footer class="footer"></footer>
