@@ -3,14 +3,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('.hero__bike-fix', { 
-	y: 0, 
-	scrollTrigger: {
-		trigger: '.hero__bike-fix',
-		start: '20% center',
-		end: '60% center',
-		markers: false,
-		scrub: false,
-		pin: true,
-	} 
-});
+export function setParallaxEffect({triggerSelector, start, end}) {
+	gsap.to(triggerSelector, { 
+		y: 0, 
+		scrollTrigger: {
+			trigger: triggerSelector,
+			start: start,
+			end: end,
+			markers: false,
+			scrub: false,
+			pin: true,
+		} 
+	});
+}

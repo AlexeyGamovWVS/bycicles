@@ -1,67 +1,8 @@
 @import "../utils/utils.scss";
+@import "../blocks/body.scss";
 @import "../blocks/header.scss";
 @import "../blocks/button.scss";
 @import "../blocks/hero.scss";
 @import "../blocks/blockquote.scss";
-
-.body {
-	min-width: 320px;
-	background-color: $bg;
-	min-height: 100vh;
-	scroll-behavior: smooth;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	-moz-text-size-adjust: 100%;
-	@extend %bodyFont;
-}
-
-%titles {
-	color: $black15;
-	font-weight: 900;
-	font-size: rez(55);
-	line-height: rez(60);
-	letter-spacing: rez(-0.5);
-}
-
-%text {
-	color: $gray22;
-	font-weight: 400;
-	font-size: rez(18);
-	line-height: rez(28);
-	opacity: 0.7;
-}
-
-%darkText {
-	color: $black15;
-	font-weight: 400;
-	font-size: rez(18);
-	line-height: rez(18);
-}
-
-%quote {
-	color: $black15;
-	font-weight: 500;
-	font-size: rez(34);
-	line-height: rez(44);
-	letter-spacing: rez(-0.5);
-}
-
-.logo {
-}
-.section {
-}
-
-.container {
-	max-width: rez(1200);
-	margin: 0 auto;
-}
-
-.main {
-}
-
-.footer {
-	height: rez(1000);
-}
+@import "../blocks/swiper.scss";
+@import "../blocks/roads.scss";

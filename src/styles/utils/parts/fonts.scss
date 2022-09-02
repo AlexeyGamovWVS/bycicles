@@ -21,3 +21,34 @@
 	font-family: "Inter", Arial, Helvetica, sans-serif;
   font-style: normal;
 }
+
+%titles {
+	color: $black15;
+	font-weight: 900;
+	font-size: rez(55);
+	line-height: rez(60);
+	letter-spacing: rez(-0.5);
+}
+
+%text {
+	color: $gray22;
+	font-weight: 400;
+	font-size: rez(18);
+	line-height: rez(28);
+	opacity: 0.7;
+}
+
+%darkText {
+	color: $black15;
+	font-weight: 400;
+	font-size: rez(18);
+	line-height: rez(18);
+}
+
+%quote {
+	color: $black15;
+	font-weight: 500;
+	font-size: rez(34);
+	line-height: rez(44);
+	letter-spacing: rez(-0.5);
+}
