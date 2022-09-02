@@ -91,8 +91,33 @@
 						</div>
 					</div>
 				</div>
-				<button class="swiper-button-prev">left</button>
-				<button class="swiper-button-next">right</button>
+
+				<div class="roads__slider-corusel swiper">
+					<div class="roads__corusel-wrapper swiper-wrapper">
+						<div class="roads__corusel-slide swiper-slide">
+							<div class="roads__image-box">
+								<img src="<%=require('./images/shosse.jpg')%>" alt="Езда на велосипеде по шоссе." class="roads__image">
+								<div class="roads__icon roads__icon_place_shosse"></div>
+							</div>
+						</div>
+						<div class="roads__corusel-slide swiper-slide">
+							<div class="roads__image-box">
+								<img src="<%=require('./images/gravel.jpg')%>" alt="Велоспорт: Грэвел." class="roads__image">
+								<div class="roads__icon roads__icon_place_gravel"></div>
+							</div>
+						</div>
+						<div class="roads__corusel-slide swiper-slide">
+							<div class="roads__image-box">
+								<img src="<%=require('./images/TT.jpg')%>" alt="Велоспорт: TT." class="roads__image">
+								<div class="roads__icon roads__icon_place_tt"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="roads__button-row">
+					<button type="button" aria-label="Предыдущий слайд." class="roads__button roads__button_type_prev hover-transition"></button>
+					<button type="button" aria-label="Следующий слайд." class="roads__button roads__button_type_next hover-transition"></button>
+				</div>
 			</div>
 		</section>
 

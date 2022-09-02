@@ -1,32 +1,25 @@
 import "../styles/pages/index.scss";
-import "./components/parallax.js";
+
+import { setParallaxEffect } from "./components/parallax";
 import { setUpFadeInUpAnima } from "./components/fadeInUp";
 import { setUpFadeInAnima } from "./components/fadeIn";
-import Swiper, { Navigation } from "swiper";
+import { Slider } from "./components/slider";
 
-function setUpSwiper(sliderSelector, options) {
-	const swiper = new Swiper(sliderSelector, options);
-	return swiper;
-}
+const textSlider = new Slider('.roads__text-slider', '.roads__button_type_next', '.roads__button_type_prev', 1000, 1);
+const photoSlider = new Slider('.roads__slider-corusel', '.roads__button_type_next', '.roads__button_type_prev', 1000, 2);
 
 const fadeInUpArray = document.querySelectorAll(".fade-in-up");
-setUpFadeInUpAnima(fadeInUpArray);
-
 const fadeInArray = document.querySelectorAll(".fade-in");
-setUpFadeInAnima(fadeInArray);
 
-const textSliderOptions = {
-	sliderSelector: ".roads__text-slider",
-	options: {
-		modules: [Navigation],
-		spaceBetween: 40,
-		cssMode: true,
-		mousewheel: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-	}
+const parallaxHeroConfig = {
+	triggerSelector: ".hero__bike-fix",
+	start: "20% center",
+	end: "60% center",
 };
 
-const swiper = setUpSwiper(textSliderOptions.sliderSelector, textSliderOptions.options);
+setUpFadeInUpAnima(fadeInUpArray);
+setUpFadeInAnima(fadeInArray);
+setParallaxEffect(parallaxHeroConfig);
+
+textSlider.init();
+photoSlider.init();
