@@ -1,0 +1,30 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	row-gap: rez(22);
+	background-color: $bg;
+
+	&:hover .card__name {
+		opacity: .75;
+	}
+	&__img-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: rez(20);
+		overflow: hidden;
+		aspect-ratio: 1/1;
+		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.14);
+		border-radius: 20px;
+	}
+	&__img {
+		object-fit: cover;
+		object-position: center;
+		transition: transform .5s ease;
+	}
+	&__name {
+		@extend %darkText;
+		line-height: rez(22);
+		font-weight: 500;
+	}
+}

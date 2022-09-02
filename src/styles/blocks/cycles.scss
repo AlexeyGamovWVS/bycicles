@@ -1,0 +1,45 @@
+.cycles {
+
+	&__container {
+		padding-top: rez(60);
+		padding-bottom: rez(60);
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-between;
+		margin-bottom: rez(80);
+	}
+	&__title {
+		max-width: rez(460);
+		@extend %titles;
+	}
+	&__filters {
+		display: flex;
+		flex-direction: row;
+		column-gap: rez(40);
+	}
+	&__filter {
+		@extend %text;
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		&_active {
+			color: $black15;
+			opacity: 1;
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: rez(30);
+		row-gap: rez(30);
+	}
+}

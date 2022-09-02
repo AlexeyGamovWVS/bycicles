@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Road Club</title>
-	<meta
-      name="description"
-      content="Интернет магазин для велоспорта"
-    />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Road Club</title>
+		<meta name="description" content="Интернет магазин для велоспорта" />
 		<meta name="Author" content="Alexey Gamov" />
-    <link
-      rel="shortcut icon"
-      href="<%=require('./images/favicon.svg')%>"
-      type="image/x-icon"
-    />
-</head>
+		<link
+			rel="shortcut icon"
+			href="<%=require('./images/favicon.svg')%>"
+			type="image/x-icon"
+		/>
+	</head>
 
-<body class="body">
-	<header class="header">
-		<div class="container header__container">
-			<a href="/" class="header__logo-box hover-transition">
-        <div class="header__logo"></div>
-      </a>
-			<nav class="header__nav">
-				<ul class="header__nav-list">
-					<li class="header__nav-item">
-						<a href="#" class="header__nav-link hover-transition">Покрытия и градиенты</a>
-					</li>
-					<li class="header__nav-item">
-						<a href="#" class="header__nav-link hover-transition">Велосипеды</a>
-					</li>
-					<li class="header__nav-item">
-						<a href="#" class="header__nav-link hover-transition">Тренировки</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</header>
+	<body class="body">
+		<header class="header">
+			<div class="container header__container">
+				<a href="/" class="header__logo-box hover-transition">
+					<div class="header__logo"></div>
+				</a>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link hover-transition"
+								>Покрытия и градиенты</a
+							>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link hover-transition"
+								>Велосипеды</a
+							>
+						</li>
+						<li class="header__nav-item">
+							<a href="#" class="header__nav-link hover-transition"
+								>Тренировки</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
-	<main class="main"></main>
+		<main class="main"></main>
 		<section class="section hero">
 			<div class="container hero__container">
 				<div class="hero__content-box">
 					<h1 class="hero__title fade-in-up">Шоссе, ТТ и&nbsp;Грэвел</h1>
 					<div class="hero__images-box">
 						<div class="hero__bike-fix fade-in">
-							<img src="<%=require('./images/byc-sh-02.jpg')%>" alt="Cannondale bycicle" class="hero__bike-img">
+							<img
+								src="<%=require('./images/byc-sh-02.jpg')%>"
+								alt="Cannondale bycicle"
+								class="hero__bike-img"
+							/>
 						</div>
-						<img src="<%=require('./images/hero-image.jpg')%>" alt="Велосипедист на лесной тропе в горах." class="hero__cover fade-in">
+						<img
+							src="<%=require('./images/hero-image.jpg')%>"
+							alt="Велосипедист на лесной тропе в горах."
+							class="hero__cover fade-in"
+						/>
 					</div>
-					<p class="hero__subtitle fade-in-up">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
-					<button type="button" class="button hero__button fade-in-up">Подробнее</button>
+					<p class="hero__subtitle fade-in-up">
+						Триатлонные старты, горные серпантины или грейвел заезды по
+						живописным маршрутам – нужно только определиться с выбором
+						велосипеда и отправиться в путь.
+					</p>
+					<button type="button" class="button hero__button fade-in-up">
+						Подробнее
+					</button>
 					<div class="hero__underline-box fade-in-up">
 						<p class="hero__additional-text">Cannondale Systemsix</p>
 						<div class="hero__line"></div>
 					</div>
-				</div>				
+				</div>
 			</div>
 		</section>
 
 		<section class="section blockquote">
 			<div class="container blockquote__container">
-				<img src="<%=require('./images/quote.jpg')%>" alt="Велосипедист едет по горной дороге в лощине" class="blockquote__image fade-in-up">
+				<img
+					src="<%=require('./images/quote.jpg')%>"
+					alt="Велосипедист едет по горной дороге в лощине"
+					class="blockquote__image fade-in-up"
+				/>
 				<figure class="blockquote__content">
-					<blockquote class="blockquote__quote fade-in-up">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</blockquote>
+					<blockquote class="blockquote__quote fade-in-up">
+						«Катайся много или мало, долго или коротко, как хочешь - но катайся»
+					</blockquote>
 					<figcaption class="blockquote__author fade-in-up">
 						<p class="blockquote__author-name">Эдди Меркс</p>
 						<p class="blockquote__author-status">Велогонщик</p>
@@ -79,15 +102,27 @@
 					<div class="roads__text-wrapper swiper-wrapper">
 						<div class="roads__text-slide swiper-slide">
 							<h2 class="roads__title">Шоссе</h2>
-							<p class="roads__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+							<p class="roads__subtitle">
+								На шоссейном велосипеде можно ездить по асфальту на разных
+								градиентах: будь то горы или равнины. Гонки проходят в командном
+								пелотоне, но тренироваться можно и самостоятельно.
+							</p>
 						</div>
 						<div class="roads__text-slide swiper-slide">
 							<h2 class="roads__title">Грэвел</h2>
-							<p class="roads__subtitle">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
+							<p class="roads__subtitle">
+								Грэвел похож на шоссейный велосипед, но конструкция рамы немного
+								отличается, и на нём стоят более широкие покрышки, всё для того
+								чтобы проехать по лёгкому бездорожью.
+							</p>
 						</div>
 						<div class="roads__text-slide swiper-slide">
 							<h2 class="roads__title">ТТ</h2>
-							<p class="roads__subtitle">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
+							<p class="roads__subtitle">
+								ТТ — это велосипед для триатлона или раздельного старта, гооняют
+								на таком велике только по равнинному асфальту, велик очень
+								быстрые и аэродинамичный.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -96,31 +131,108 @@
 					<div class="roads__corusel-wrapper swiper-wrapper">
 						<div class="roads__corusel-slide swiper-slide">
 							<div class="roads__image-box">
-								<img src="<%=require('./images/shosse.jpg')%>" alt="Езда на велосипеде по шоссе." class="roads__image">
+								<img
+									src="<%=require('./images/shosse.jpg')%>"
+									alt="Езда на велосипеде по шоссе."
+									class="roads__image"
+								/>
 								<div class="roads__icon roads__icon_place_shosse"></div>
 							</div>
 						</div>
 						<div class="roads__corusel-slide swiper-slide">
 							<div class="roads__image-box">
-								<img src="<%=require('./images/gravel.jpg')%>" alt="Велоспорт: Грэвел." class="roads__image">
+								<img
+									src="<%=require('./images/gravel.jpg')%>"
+									alt="Велоспорт: Грэвел."
+									class="roads__image"
+								/>
 								<div class="roads__icon roads__icon_place_gravel"></div>
 							</div>
 						</div>
 						<div class="roads__corusel-slide swiper-slide">
 							<div class="roads__image-box">
-								<img src="<%=require('./images/TT.jpg')%>" alt="Велоспорт: TT." class="roads__image">
+								<img
+									src="<%=require('./images/TT.jpg')%>"
+									alt="Велоспорт: TT."
+									class="roads__image"
+								/>
 								<div class="roads__icon roads__icon_place_tt"></div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="roads__button-row">
-					<button type="button" aria-label="Предыдущий слайд." class="roads__button roads__button_type_prev hover-transition"></button>
-					<button type="button" aria-label="Следующий слайд." class="roads__button roads__button_type_next hover-transition"></button>
+					<button
+						type="button"
+						aria-label="Предыдущий слайд."
+						class="roads__button roads__button_type_prev hover-transition"
+					></button>
+					<button
+						type="button"
+						aria-label="Следующий слайд."
+						class="roads__button roads__button_type_next hover-transition"
+					></button>
 				</div>
 			</div>
 		</section>
 
-	<footer class="footer"></footer>
-</body>
+		<section class="section cycles">
+			<div class="container cycles__container">
+				<div class="cycles__header">
+					<h2 class="cycles__title">Велосипеды</h2>
+					<ul class="cycles__filters">
+						<li class="cycles__filter hover-transition">Шоссе</li>
+						<li class="cycles__filter hover-transition">Грэвел</li>
+						<li class="cycles__filter hover-transition">TT</li>
+					</ul>
+				</div>
+				<ul class="cycles__cards">
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-sh-01.jpg')%>" alt="Cervelo Caledonia-5." class="card__img"></div>
+						<p class="card__name">Cervelo Caledonia-5</p>
+					</li>
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-sh-02.jpg')%>" alt="Cannondale Systemsix Himod." class="card__img"></div>
+						<p class="card__name">Cannondale Systemsix Himod</p>
+					</li>
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-sh-03.jpg')%>" alt="Trek Domane SL-7." class="card__img"></div>
+						<p class="card__name">Trek Domane SL-7</p>
+					</li>
+				</ul>
+
+				<ul class="cycles__cards">
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-gr-01.jpg')%>" alt="Cervelo Aspero GRX 810." class="card__img"></div>
+						<p class="card__name">Cervelo Aspero GRX 810</p>
+					</li>
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-gr-02.jpg')%>" alt="Specialized S-Works Diverge." class="card__img"></div>
+						<p class="card__name">Specialized S-Works Diverge</p>
+					</li>
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-gr-03.jpg')%>" alt="Cannondale Topstone Lefty 3." class="card__img"></div>
+						<p class="card__name">Cannondale Topstone Lefty 3</p>
+					</li>
+				</ul>
+
+				<ul class="cycles__cards">
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-tt-01.jpg')%>" alt="Specialized S-Works Shiv." class="card__img"></div>
+						<p class="card__name">Specialized S-Works Shiv</p>
+					</li>
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-tt-02.jpg')%>" alt="BMC Timemachine 01 ONE." class="card__img"></div>
+						<p class="card__name">BMC Timemachine 01 ONE</p>
+					</li>
+					<li class="card">
+						<div class="card__img-box"><img src="<%=require('./images/byc-tt-03.jpg')%>" alt="Cervelo P-Series." class="card__img"></div>
+						<p class="card__name">Cervelo P-Series</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<footer class="footer"></footer>
+	</body>
 </html>
