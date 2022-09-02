@@ -14,8 +14,12 @@
 		padding: rez(20);
 		overflow: hidden;
 		aspect-ratio: 1/1;
-		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.14);
+		box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.06);
 		border-radius: 20px;
+		text-decoration: none;
+		&:hover {
+			box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.11);
+		}
 	}
 	&__img {
 		object-fit: cover;
