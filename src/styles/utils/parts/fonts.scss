@@ -49,9 +49,17 @@
 	letter-spacing: rez(-0.5);
 }
 
+%links {
+	font-weight: 500;
+	font-size: rez(14);
+	line-height: rez(18);
+	text-decoration: none;
+}
+
 .title {
 	@extend %titles;
 	color: $black15;
+	transition: color .3s ease;
 	&.darkmode {
 		color: white;
 	}
@@ -60,6 +68,7 @@
 .text {
 	@extend %text;
 	color: $gray22;
+	transition: color .3s ease;
 	&.darkmode {
 		color: $whiteE5;
 	}
@@ -68,6 +77,7 @@
 .darkText {
  @extend %darkText;
  color: $black15;
+ transition: color .3s ease;
  &.darkmode {
 	color: white;
  }
@@ -76,6 +86,19 @@
 .quote {
 	@extend %quote;
 	color: $black15;
+	transition: color .3s ease;
+	&.darkmode {
+		color: white;
+	}
+}
+
+.link {
+	@extend %links;
+	color: $black15;
+	transition: color .3s ease;
+	&:hover {
+		opacity: .75;
+	}
 	&.darkmode {
 		color: white;
 	}

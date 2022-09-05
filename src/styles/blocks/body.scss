@@ -10,7 +10,7 @@
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	@extend %bodyFont;
-
+	transition: background-color .3s ease;
 	&.darkmode {
 		background-color: $bg-dark;
 	}
