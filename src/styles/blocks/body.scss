@@ -10,4 +10,8 @@
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	@extend %bodyFont;
+
+	&.darkmode {
+		background-color: $bg-dark;
+	}
 }
