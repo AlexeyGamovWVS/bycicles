@@ -56,10 +56,24 @@
 	text-decoration: none;
 }
 
+%author {
+	font-weight: 500;
+	font-size: rez(20);
+	line-height: rez(32);
+}
+
 .title {
 	@extend %titles;
 	color: $black15;
 	transition: color .3s ease;
+	&.darkmode {
+		color: white;
+	}
+}
+
+.author {
+	@extend %author;
+	color: $black15;
 	&.darkmode {
 		color: white;
 	}
