@@ -105,3 +105,12 @@
 	visibility: visible;
 	opacity: 1;
 }
+
+.roads__text-wrapper.darkmode .roads__title {
+	color: white;
+}
+
+.roads__text-wrapper.darkmode .roads__subtitle {
+	color: $whiteE5;
+}
+

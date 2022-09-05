@@ -59,11 +59,12 @@ const formValidate = new Validate(form, {
 
 const a = document.querySelectorAll("[data-theme='themeMod']");
 
-const switcher = document.querySelector(".footer__switcher");
+const switcher = document.querySelector(".switcher__btn");
 
 switcher.addEventListener("click", () => {
-	const switherIcon = switcher.querySelector('.footer__switcher-icon');
-	switherIcon.classList.toggle('footer__switcher-icon_pos_dark');
+	const switherIcon = switcher.querySelector('.switcher__icon');
+	const switherIconDarkClass = ('switcher__icon_pos_dark');
+	switherIcon.classList.toggle(switherIconDarkClass);
 	changeTheme(a);
 });
 

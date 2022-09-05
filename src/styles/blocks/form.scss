@@ -1,0 +1,63 @@
+.form {
+	&__title {
+		font-weight: 600;
+		font-size: rez(24);
+		line-height: rez(32);
+		color: $black15;
+		max-width: rez(229);
+	}
+
+	&__label {
+		position: relative;
+		width: 100%;
+	}
+	
+	&__item {
+		width: 100%;
+		outline: none;
+		border: 1px solid rgba($color: $grayC7, $alpha: 0.5);
+		border-radius: rez(4);
+		padding: rez(11) rez(20);
+		background: transparent;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		color: $black15;
+		display: block;
+
+		&::placeholder {
+			font-weight: 500;
+			font-size: rez(13);
+			line-height: rez(28);
+			color: $gray22;
+			opacity: 0.7;
+		}
+
+		&:hover {
+			border-color: $grayC7;
+			&::placeholder {
+				color: $black15;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__submit {
+		display: none;
+		background: transparent;
+		border: none;
+		color: $black15;
+		position: absolute;
+		right: rez(20);
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+		padding: rez(6);
+		transition: color 0.3s ease;
+		&:hover {
+			color: $green-dark;
+		}
+		&_ready {
+			display: block;
+		}
+	}
+}

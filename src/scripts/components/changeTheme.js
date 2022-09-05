@@ -1,6 +1,4 @@
-export function changeTheme(arrayOfItems, swither) {
-	console.log('init');
-
+export function changeTheme(arrayOfItems) {
 	arrayOfItems.forEach((item) => {
 		item.classList.toggle("darkmode");
 	});

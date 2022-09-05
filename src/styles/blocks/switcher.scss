@@ -1,0 +1,52 @@
+.switcher {
+	display: flex;
+	flex-direction: row;
+	column-gap: rez(22);
+
+	&__btn {
+		cursor: pointer;
+		width: rez(44);
+		background-color: white;
+		border: none;
+		border-radius: rez(100);
+		padding: rez(2);
+		&:hover .footer__switcher-icon {
+			background-color: $green-dark;
+		}
+	}
+	
+	&__icon {
+		display: block;
+		transition: transform 0.3s ease;
+		height: rez(20);
+		aspect-ratio: 1/1;
+		border-radius: 100%;
+		background-color: $primary;
+		&_pos {
+			&_light {
+				transform: translateX(0);
+			}
+			&_dark {
+				transform: translateX(100%);
+			}
+		}
+	}
+
+	&__theme-icon {
+		width: rez(28);
+		aspect-ratio: 1/1;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+
+		&_type {
+			&_light {
+				background-image: url(../../images/light-mode-icon.svg);
+			}
+			&_dark {
+				background-size: 70%;
+				background-image: url(../../images/dark-mode-icon.svg);
+			}
+		}
+	}
+}
