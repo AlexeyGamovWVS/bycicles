@@ -23,7 +23,6 @@
 }
 
 %titles {
-	color: $black15;
 	font-weight: 900;
 	font-size: rez(55);
 	line-height: rez(60);
@@ -31,7 +30,6 @@
 }
 
 %text {
-	color: $gray22;
 	font-weight: 400;
 	font-size: rez(18);
 	line-height: rez(28);
@@ -39,16 +37,46 @@
 }
 
 %darkText {
-	color: $black15;
 	font-weight: 400;
 	font-size: rez(18);
 	line-height: rez(18);
 }
 
 %quote {
-	color: $black15;
 	font-weight: 500;
 	font-size: rez(34);
 	line-height: rez(44);
 	letter-spacing: rez(-0.5);
+}
+
+.title {
+	@extend %titles;
+	color: $black15;
+	&.darkmode {
+		color: white;
+	}
+}
+
+.text {
+	@extend %text;
+	color: $gray22;
+	&.darkmode {
+		color: $whiteE5;
+	}
+}
+
+.darkText {
+ @extend %darkText;
+ color: $black15;
+ &.darkmode {
+	color: white;
+ }
+}
+
+.quote {
+	@extend %quote;
+	color: $black15;
+	&.darkmode {
+		color: white;
+	}
 }
