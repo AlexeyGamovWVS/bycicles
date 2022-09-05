@@ -1,31 +1,14 @@
 @import "../utils/utils.scss";
-
-.body {
-	min-width: 320px;
-}
-
-.logo {
-}
-
-.container {
-	max-width: rez(1200);
-	margin: 0 auto;
-}
-
-.header {
-	&__container {
-		padding: rez(20);
-	}
-	&__logo-box {
-	}
-	&__logo {
-	}
-	&__nav {
-	}
-	&__nav-list {
-	}
-	&__nav-item {
-	}
-	&__nav-link {
-	}
-}
+@import "../blocks/body.scss";
+@import "../blocks/header.scss";
+@import "../blocks/button.scss";
+@import "../blocks/hero.scss";
+@import "../blocks/blockquote.scss";
+@import "../blocks/swiper.scss";
+@import "../blocks/roads.scss";
+@import "../blocks/card.scss";
+@import "../blocks/cycles.scss";
+@import "../blocks/training.scss";
+@import "../blocks/footer.scss";
+@import "../blocks/switcher.scss";
+@import "../blocks/form.scss";

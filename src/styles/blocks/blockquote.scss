@@ -1,0 +1,23 @@
+.blockquote {
+	&__container {
+		padding-top: rez(120);
+		padding-bottom: rez(60);
+		display: flex;
+		flex-direction: row;
+		column-gap: rez(80);
+	}
+	&__image {
+		width: rez(650);
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__author-name {
+		margin-bottom: rez(6);
+	}
+	&__author-status {
+		font-size: rez(16);
+	}
+}

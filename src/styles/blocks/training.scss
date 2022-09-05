@@ -1,0 +1,32 @@
+.training {
+	&__container {
+		padding-top: rez(150);
+		padding-bottom: rez(120);
+		display: grid;
+		grid-template-columns: rez(460) 1fr;
+		column-gap: rez(160);
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__title {
+		margin-bottom: rez(50);
+	}
+	&__links {
+		display: flex;
+		flex-direction: row;
+		column-gap: rez(30);
+	}
+	&__link {
+		font-weight: 600;
+		text-decoration: none;
+		&:hover {
+			opacity: .75;
+		}
+	}
+	&__img-box {
+		width: 100%;
+	}
+}

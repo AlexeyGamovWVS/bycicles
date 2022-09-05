@@ -1,0 +1,70 @@
+.hero {
+	position: relative;
+	height: fit-content;
+	min-height: rez(836);
+
+	&__container {
+		padding-top: rez(160);
+		z-index: 2;
+	}
+
+	&__content-box {
+		display: flex;
+		flex-direction: column;
+		max-width: rez(460);
+	}
+
+	&__title {
+		margin-bottom: rez(50);
+	}
+
+	&__subtitle {
+		margin-bottom: rez(50);
+	}
+
+	&__underline-box {
+		margin-top: rez(168);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		column-gap: rez(30);
+	}
+
+	&__line {
+		height: rez(2);
+		width: rez(132);
+		background-color: $grayC7;
+		&.darkmode {
+			background-color: $gray70;
+		}
+	}
+
+	&__images-box {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&__bike-fix {
+		width: rez(440);
+		height: rez(300);
+		display: flex;
+		box-shadow: rez(-20) rez(60) rez(220) rgba(0, 0, 0, 0.14);
+		background-color: $bg;
+		border-radius: 20px;
+		position: absolute;
+		top: rez(347);
+		right: rez(360);
+	}
+
+	&__bike-img {
+		margin: auto;
+		height: 100%;
+	}
+
+	&__cover {
+		height: rez(836);
+		top: rez(80);
+		right: 0;
+	}
+}

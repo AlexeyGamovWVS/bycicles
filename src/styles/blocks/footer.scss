@@ -1,0 +1,30 @@
+.footer {
+	background-color: $grayEF;
+	&.darkmode {
+		background-color: $black2f;
+	}
+	&__container {
+		padding-top: rez(80);
+		padding-bottom: rez(60);
+	}
+	&__form-container {
+		margin-bottom: rez(100);
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		row-gap: rez(50);
+		max-width: rez(360);
+	}
+	&__last-row {
+		margin-top: rez(86);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__copyright {
+		font-weight: 600;
+		color: $grayCF;
+	}
+}
