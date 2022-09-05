@@ -6,7 +6,7 @@ import { setUpFadeInAnima } from "./components/fadeIn";
 import { Slider } from "./components/slider";
 import { Tabs } from "./components/tabs";
 import { Validate } from "./components/validation";
-import { changeTheme } from "./components/themeChanger";
+import { changeTheme } from "./components/changeTheme";
 
 const textSlider = new Slider(
 	".roads__text-slider",
@@ -59,7 +59,11 @@ const formValidate = new Validate(form, {
 
 const a = document.querySelectorAll("[data-theme='themeMod']");
 
-document.querySelector(".footer__switcher").addEventListener("click", () => {
+const switcher = document.querySelector(".footer__switcher");
+
+switcher.addEventListener("click", () => {
+	const switherIcon = switcher.querySelector('.footer__switcher-icon');
+	switherIcon.classList.toggle('footer__switcher-icon_pos_dark');
 	changeTheme(a);
 });
 

@@ -60,17 +60,18 @@
 		}
 	}
 	&__switcher-icon {
-		transition: all 0.3s ease;
+		display: block;
+		transition: transform 0.3s ease;
 		height: rez(20);
 		aspect-ratio: 1/1;
 		border-radius: 100%;
 		background-color: $primary;
 		&_pos {
 			&_light {
-				align-self: flex-start;
+				transform: translateX(0);
 			}
 			&_dark {
-				align-self: flex-end;
+				transform: translateX(100%);
 			}
 		}
 	}

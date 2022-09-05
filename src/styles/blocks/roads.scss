@@ -11,13 +11,11 @@
 	}
 
 	&__title {
-		@extend %titles;
 		margin-bottom: rez(20);
 		max-width: rez(460);
 	}
 
 	&__subtitle {
-		@extend %text;
 		max-width: rez(460);
 	}
 
@@ -82,9 +80,17 @@
 		&_type {
 			&_prev {
 				background-image: url(../../images/arrow-left.svg);
+				&.darkmode {
+					background-image: url(../../images/arrow-left-white.svg);
+					background-color: $black43;
+				}
 			}
 			&_next {
 				background-image: url(../../images/arrow-right.svg);
+				&.darkmode {
+					background-image: url(../../images/arrow-right-light.svg);
+					background-color: $black43;
+				}
 			}
 		}
 
