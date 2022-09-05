@@ -19,13 +19,13 @@ export class Validate {
 	_setEventListeners() {
 		this._inputs.forEach((input) => {
 			input.addEventListener("input", () => {
-				this._toggleButtonState(this._form.checkValidity());
+				input.value.length > 1 ? this._toggleButtonState(this._form.checkValidity()) : this._toggleButtonState(); 
 			});
 		});
 		this._form.addEventListener("submit", (evt) => {
 			evt.preventDefault();
 			this._form.reset();
-			this._toggleButtonState();
+			this._toggleButtonState(false);
 			// console.log("sended");
 		});
 	}
