@@ -2,6 +2,7 @@
 	position: relative;
 	height: fit-content;
 	min-height: rez(836);
+
 	&__container {
 		padding-top: rez(160);
 		z-index: 2;
@@ -12,14 +13,15 @@
 		flex-direction: column;
 		max-width: rez(460);
 	}
+
 	&__title {
 		margin-bottom: rez(50);
-		@extend %titles;
 	}
+
 	&__subtitle {
 		margin-bottom: rez(50);
-		@extend %text;
 	}
+
 	&__underline-box {
 		margin-top: rez(168);
 		display: flex;
@@ -27,13 +29,14 @@
 		align-items: center;
 		column-gap: rez(30);
 	}
-	&__additional-text {
-		@extend %darkText;
-	}
+
 	&__line {
 		height: rez(2);
 		width: rez(132);
 		background-color: $grayC7;
+		&.darkmode {
+			background-color: $gray70;
+		}
 	}
 
 	&__images-box {
@@ -53,6 +56,7 @@
 		top: rez(347);
 		right: rez(360);
 	}
+
 	&__bike-img {
 		margin: auto;
 		height: 100%;
