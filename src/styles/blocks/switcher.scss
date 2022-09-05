@@ -14,7 +14,7 @@
 			background-color: $green-dark;
 		}
 	}
-	
+
 	&__icon {
 		display: block;
 		transition: transform 0.3s ease;
@@ -46,6 +46,17 @@
 			&_dark {
 				background-size: 70%;
 				background-image: url(../../images/dark-mode-icon.svg);
+			}
+		}
+	}
+
+	&.darkmode {
+		.switcher {
+			&__btn {
+				background-color: $black54;
+			}
+			&__theme-icon {
+				opacity: 0.33;
 			}
 		}
 	}

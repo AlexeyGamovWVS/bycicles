@@ -1,5 +1,8 @@
 .footer {
 	background-color: $grayEF;
+	&.darkmode {
+		background-color: $black2f;
+	}
 	&__container {
 		padding-top: rez(80);
 		padding-bottom: rez(60);
@@ -22,8 +25,6 @@
 	}
 	&__copyright {
 		font-weight: 600;
-		font-size: rez(14);
-		line-height: rez(20);
 		color: $grayCF;
 	}
 }

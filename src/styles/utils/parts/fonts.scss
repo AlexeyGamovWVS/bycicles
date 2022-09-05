@@ -29,6 +29,12 @@
 	letter-spacing: rez(-0.5);
 }
 
+%text-s {
+	font-weight: 400;
+	font-size: rez(14);
+	line-height: rez(20);
+}
+
 %text {
 	font-weight: 400;
 	font-size: rez(18);
@@ -76,6 +82,14 @@
 	color: $black15;
 	&.darkmode {
 		color: white;
+	}
+}
+
+.text-s {
+	@extend %text-s;
+	color: $black15;
+	&.darkmode {
+		color: $black56;
 	}
 }
 

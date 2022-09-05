@@ -5,13 +5,14 @@
 		line-height: rez(32);
 		color: $black15;
 		max-width: rez(229);
+		transition: color 0.3s ease;
 	}
 
 	&__label {
 		position: relative;
 		width: 100%;
 	}
-	
+
 	&__item {
 		width: 100%;
 		outline: none;
@@ -20,7 +21,7 @@
 		padding: rez(11) rez(20);
 		background: transparent;
 		cursor: pointer;
-		transition: all 0.3s ease;
+		transition: border-color 0.3s ease;
 		color: $black15;
 		display: block;
 
@@ -30,6 +31,7 @@
 			line-height: rez(28);
 			color: $gray22;
 			opacity: 0.7;
+			transition: color, opacity 0.3s ease;
 		}
 
 		&:hover {
@@ -38,6 +40,10 @@
 				color: $black15;
 				opacity: 1;
 			}
+		}
+
+		&:-webkit-autofill {
+			transition: all 50000s ease-in-out;
 		}
 	}
 
@@ -58,6 +64,36 @@
 		}
 		&_ready {
 			display: block;
+		}
+	}
+
+	&.darkmode {
+		.form {
+			&__title {
+				color: white;
+			}
+			
+			&__submit {
+				color: white;
+				&:hover {
+					color: $primary;
+				}
+			}
+
+			&__item {
+				color: white;
+				border-color: rgba($color: white, $alpha: 0.5);
+	
+				&::placeholder {
+					color: rgba($color: white, $alpha: 0.7);
+				}
+	
+				&:hover {
+					&::placeholder {
+						color: white;
+					}
+				}
+			}
 		}
 	}
 }

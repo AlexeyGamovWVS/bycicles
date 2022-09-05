@@ -12,11 +12,7 @@
 		justify-content: space-between;
 	}
 	&__title {
-		@extend %titles;
 		margin-bottom: rez(50);
-	}
-	&__subtitle {
-		@extend %text;
 	}
 	&__links {
 		display: flex;
@@ -24,7 +20,6 @@
 		column-gap: rez(30);
 	}
 	&__link {
-		@extend %darkText;
 		font-weight: 600;
 		text-decoration: none;
 		&:hover {
