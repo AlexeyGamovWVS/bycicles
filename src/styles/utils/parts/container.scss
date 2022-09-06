@@ -1,4 +1,17 @@
 .container {
 	max-width: rez(1200);
 	margin: 0 auto;
+
+	@include media-l {
+		max-width: rez-l(768);
+		padding: rez-l(40) rez-l(20);
+	}
+	@include media-t {
+		max-width: unset;
+		width: 100%;
+		padding: rez-t(40) rez-t(20);
+	}
+	@include media-m {
+		padding: rez-t(40) rez-t(10);
+	}
 }

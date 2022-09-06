@@ -20,7 +20,7 @@
 				<a href="/" class="header__logo-box hover-transition">
 					<div data-theme="themeMod" class="header__logo"></div>
 				</a>
-				<nav class="header__nav">
+				<nav class="header__nav header__nav_place_desktop">
 					<ul class="header__nav-list">
 						<li class="header__nav-item">
 							<a
@@ -48,6 +48,57 @@
 						</li>
 					</ul>
 				</nav>
+				<button type="button" class="header__open-menu-btn hover-transition">O</button>
+			</div>
+			<div data-theme="themeMod" class="header__burger">
+				<button type="button" class="header__close-btn hover-transition" aria-label="Закрыть меню.">X</button>
+				<a href="/" class="header__logo-box header__logo-box_place_burger hover-transition">
+					<div data-theme="themeMod" class="header__logo"></div>
+				</a>
+				<nav class="header__nav header__nav_place_mobile">
+					<ul class="header__nav-list">
+						<li class="header__nav-item">
+							<a
+								href="#"
+								data-theme="themeMod"
+								class="link header__nav-link hover-transition"
+								>Покрытия и градиенты</a
+							>
+						</li>
+						<li class="header__nav-item">
+							<a
+								href="#"
+								data-theme="themeMod"
+								class="link header__nav-link hover-transition"
+								>Велосипеды</a
+							>
+						</li>
+						<li class="header__nav-item">
+							<a
+								href="#"
+								data-theme="themeMod"
+								class="link header__nav-link hover-transition"
+								>Тренировки</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<div data-theme="themeMod" class="switcher header__switcher">
+					<div
+						class="switcher__theme-icon switcher__theme-icon_type_light"
+						aria-label="Светлая тема."
+					></div>
+					<button
+						class="switcher__btn"
+						aria-label="Кнопка смены темы со светлой на темную и обратно."
+					>
+						<div class="switcher__icon switcher__icon_pos_light"></div>
+					</button>
+					<div
+						class="switcher__theme-icon switcher__theme-icon_type_dark"
+						aria-label="Тёмная тема."
+					></div>
+				</div>
 			</div>
 		</header>
 
@@ -458,7 +509,7 @@
 				</div>
 				<div class="footer__last-row">
 					<p data-theme="themeMod" class="text-s footer__copyright">© Road Club 2021</p>
-					<div data-theme="themeMod" class="switcher">
+					<div data-theme="themeMod" class="switcher footer__switcher">
 						<div
 							class="switcher__theme-icon switcher__theme-icon_type_light"
 							aria-label="Светлая тема."

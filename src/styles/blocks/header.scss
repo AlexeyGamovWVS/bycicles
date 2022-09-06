@@ -4,7 +4,7 @@
 	z-index: 999998;
 	background-color: $bg;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
-	
+
 	&.darkmode {
 		background-color: $bg-dark;
 	}
@@ -15,18 +15,45 @@
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+		@include media-t {
+			padding: rez-t(16) rez-t(20);
+		}
+		@include media-l {
+			padding: rez-l(16) rez-l(20);
+		}
+		@include media-m {
+			padding: rez-m(16) rez-m(10);
+		}
 	}
 
 	&__logo-box {
-		height: rez(40);
+		height: rez(32);
+		aspect-ratio: 4/1;
 		&:hover {
-			opacity: .75;
+			opacity: 0.75;
+		}
+		@include media-l {
+			height: rez-l(24);
+		}
+		@include media-t {
+			height: rez-t(20);
+		}
+		@include media-m {
+			height: rez-m(16);
+		}
+		&_place {
+			&_burger {
+				@include media-m {
+					height: rez-m(20);
+					margin-bottom: rez-m(40);
+				}
+			}
 		}
 	}
 
 	&__logo {
 		height: 100%;
-		width: rez(120);
+		width: 100%;
 		background-image: url(../../images/logo-black.svg);
 		background-size: contain;
 		background-position: left;
@@ -36,13 +63,100 @@
 		}
 	}
 
+	&__nav {
+		&_place {
+			&_desktop {
+				@include media-m {
+					display: none;
+				}
+			}
+			&_mobile {
+			}
+		}
+	}
+
 	&__nav-list {
 		display: flex;
 		flex-direction: row;
 		column-gap: rez(34);
+		@include media-t {
+			column-gap: rez-t(24);
+		}
+		@include media-m {
+			flex-direction: column;
+			row-gap: rez-m(32);
+			align-items: center;
+		}
 	}
 
 	&__nav-link {
 		text-align: right;
+		@include media-m {
+			text-align: center;
+		}
+	}
+
+	&__burger {
+		display: none;
+		@include media-m {
+			height: 100vh;
+			padding-top: rez-m(144);
+			background-color: $bg;
+			flex-direction: column;
+			position: fixed;
+			top: 0;
+			left: 0;
+			align-items: center;
+			width: 100%;
+			&.darkmode {
+				background-color: $bg-dark;
+			}
+		}
+		&_visible {
+			display: flex;
+		}
+	}
+
+	&__switcher {
+		margin: auto auto rez-m(36);
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: rez-m(26);
+		right: rez-m(20);
+		cursor: pointer;
+		padding: 0;
+		background: transparent;
+		border: none;
+		width: rez-m(16);
+		aspect-ratio: 1/1;
+		background-image: url(../../images/close.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+	&__open-menu-btn {
+		display: none;
+		@include media-m {
+			display: block;
+			cursor: pointer;
+			padding: 0;
+			background: transparent;
+			border: none;
+			width: rez-m(16);
+			aspect-ratio: 1/1;
+			background-image: url(../../images/burger.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			&:hover {
+				opacity: 0.6;
+			}
+		}
 	}
 }

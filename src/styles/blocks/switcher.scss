@@ -2,6 +2,9 @@
 	display: flex;
 	flex-direction: row;
 	column-gap: rez(22);
+	@include media-l {
+		column-gap: 22px;
+	}
 
 	&__btn {
 		cursor: pointer;
@@ -13,6 +16,10 @@
 		&:hover .footer__switcher-icon {
 			background-color: $green-dark;
 		}
+		@include media-l {
+			width: 44px;
+			padding: 2px;
+		}
 	}
 
 	&__icon {
@@ -22,6 +29,9 @@
 		aspect-ratio: 1/1;
 		border-radius: 100%;
 		background-color: $primary;
+		@include media-l {
+			height: 20px;
+		}
 		&_pos {
 			&_light {
 				transform: translateX(0);
@@ -38,7 +48,9 @@
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
-
+		@include media-l {
+			width: 28px;
+		}
 		&_type {
 			&_light {
 				background-image: url(../../images/light-mode-icon.svg);
