@@ -70,8 +70,6 @@
 					display: none;
 				}
 			}
-			&_mobile {
-			}
 		}
 	}
 
@@ -97,8 +95,10 @@
 	}
 
 	&__burger {
-		display: none;
+		transform: translateY(-100%);
+		visibility: hidden;
 		@include media-m {
+			display: flex;
 			height: 100vh;
 			padding-top: rez-m(144);
 			background-color: $bg;
@@ -108,12 +108,14 @@
 			left: 0;
 			align-items: center;
 			width: 100%;
+			transition: visibility, transform 0.3s ease;
 			&.darkmode {
 				background-color: $bg-dark;
 			}
 		}
 		&_visible {
-			display: flex;
+			visibility: visible;
+			transform: translate(0);
 		}
 	}
 
