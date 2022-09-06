@@ -96,9 +96,10 @@
 
 	&__burger {
 		transform: translateY(-100%);
-		visibility: hidden;
+		display: none;
 		@include media-m {
 			display: flex;
+			visibility: hidden;
 			height: 100vh;
 			padding-top: rez-m(144);
 			background-color: $bg;
@@ -137,6 +138,9 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		&.darkmode {
+			background-image: url(../../images/close-white.svg);
+		}
 		&:hover {
 			opacity: 0.6;
 		}
@@ -156,6 +160,9 @@
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
+			&.darkmode {
+				background-image: url(../../images/burger-white.svg);
+			}
 			&:hover {
 				opacity: 0.6;
 			}
