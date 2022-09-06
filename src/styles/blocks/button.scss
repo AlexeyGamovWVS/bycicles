@@ -3,7 +3,7 @@
 	color: white;
 	font-weight: 600;
 	font-size: rez(14);
-	line-height: rez(18);
+	line-height: calc(18 / 14);
 	text-align: center;
 	letter-spacing: rez(1);
 	padding: rez(16) rez(10);
@@ -15,6 +15,28 @@
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+
+	@include media-l {
+		border-radius: 4px;
+		min-width: rez-l(180);
+		font-size: rez-l(14);
+		letter-spacing: rez-l(1);
+		padding: rez-l(16) rez-l(10);
+	}
+	@include media-t {
+		min-width: rez-t(180);
+		font-size: rez-t(14);
+		letter-spacing: rez-t(1);
+		padding: rez-t(16) rez-t(10);
+	}
+	@include media-m {
+		min-width: rez-m(180);
+		font-size: rez-m(13);
+		letter-spacing: rez-m(1);
+		padding: rez-m(16) rez-m(10);
+		width: 100%;
+		max-width: rez-m(300);
+	}
 
 	&::before {
 		content: "";
