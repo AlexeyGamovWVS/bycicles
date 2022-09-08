@@ -35,11 +35,44 @@
 	}
 	&__cards {
 		display: none;
-		grid-template-columns: repeat(3, 1fr);
-		column-gap: rez(30);
-		row-gap: rez(30);
+		overflow: visible;
 		&_active {
-			display: grid;
+			display: block;
 		}
 	}
+	&__wrapper {
+		overflow: visible;
+		// display: grid;		
+		// grid-template-columns: repeat(3, 1fr);
+		// column-gap: rez(30);
+		// row-gap: rez(30);
+	}
+}
+
+.cycles__pagination {
+	display: none;
+	@include media-t {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin: rez-m(20) auto 0;
+	}
+}
+
+.swiper-pagination-bullet {
+	width: 8px;
+	height: 8px;
+	background-color: $grayC7;
+	border-radius: 100px;
+	display: inline-block;
+	margin-right: 5px;
+	transition: background-color .3s ease;
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $black15;
 }
