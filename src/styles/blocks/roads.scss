@@ -4,6 +4,9 @@
 		max-width: unset;
 		padding-top: rez(60);
 		padding-bottom: rez(60);
+		@include media-l {
+			position: relative;
+		}
 	}
 
 	&__text-slider {
