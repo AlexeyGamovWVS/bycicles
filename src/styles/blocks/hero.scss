@@ -108,14 +108,11 @@
 			z-index: 1;
 		}
 		@include media-m {
-			//
 			margin-top: unset;
 			margin-bottom: unset;
 			position: absolute;
 			top: rez-m(110);
 			left: 0;
-			// margin-top: rez-m(150);
-			// margin-bottom: rez-m(37);
 			width: rez-m(234);
 			height: rez-m(160);
 			z-index: 1;
