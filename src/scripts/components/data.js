@@ -33,6 +33,7 @@ const UI_SELECTORS = {
   SECTION: ".cycles",
   TAB_BTN_ACTIVE: ".cycles__filter_active",
   TAB_CONTENT_ACTIVE: ".cycles__cards_active",
+	SELECT_FILTER: "#cycles__filters"
 };
 
 const UI_CLASSES = {
