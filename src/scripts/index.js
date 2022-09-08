@@ -18,7 +18,7 @@ import {
 } from "./components/data"
 
 burger.init();
-textSlider.init();
+// textSlider.init();
 photoSlider.init();
 tabs.initTabs();
 formValidate.enableValidation();

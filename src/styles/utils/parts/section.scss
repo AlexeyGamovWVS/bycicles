@@ -1,0 +1,14 @@
+.section {
+  &__divider {
+    display: none;
+    @include media-t {
+      display: block;
+      margin-top: rez-t(40);
+      height: 1px;
+      background-color: $grayE3;
+    }
+    @include media-m {
+      margin-top: rez-m(40);
+    }
+  }
+}
