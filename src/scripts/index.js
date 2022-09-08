@@ -6,17 +6,17 @@ import { setUpFadeInAnima } from "./components/fadeIn";
 import { changeTheme } from "./components/changeTheme";
 import { GridSlider } from "./components/gridSlider";
 import {
-	//goodsSlider,
-	photoSlider,
-	fadeInUpArray,
-	fadeInArray,
-	parallaxHeroConfig,
-	tabs,
-	formValidate,
-	themeElements,
-	switcher,
-	burger
-} from "./components/data"
+  //goodsSlider,
+  photoSlider,
+  fadeInUpArray,
+  fadeInArray,
+  parallaxHeroConfig,
+  tabs,
+  formValidate,
+  themeElements,
+  switchers,
+  burger,
+} from "./components/data";
 
 burger.init();
 photoSlider.init();
@@ -27,19 +27,21 @@ setUpFadeInUpAnima(fadeInUpArray);
 setUpFadeInAnima(fadeInArray);
 setParallaxEffect(parallaxHeroConfig);
 
-switcher.addEventListener("click", () => {
-	const switherIcon = switcher.querySelector(".switcher__icon");
-	const switherIconDarkClass = "switcher__icon_pos_dark";
-	switherIcon.classList.toggle(switherIconDarkClass);
-	changeTheme(themeElements);
+switchers.forEach((switcher) => {
+  switcher.addEventListener("click", () => {
+    const switherIcon = switcher.querySelector(".switcher__icon");
+    const switherIconDarkClass = "switcher__icon_pos_dark";
+    switherIcon.classList.toggle(switherIconDarkClass);
+    changeTheme(themeElements);
+  });
 });
 
 const goodRows = document.querySelectorAll(".cycles__cards");
-goodRows.forEach((row, index)=> {
-	const goodSlider = new GridSlider(
-		`.cycles__cards[data-index="${index}"]`,
-		`.cycles__cards[data-index="${index}"] .cycles__pagination`,
-		1000
-	);
-	goodSlider.init();
+goodRows.forEach((row, index) => {
+  const goodSlider = new GridSlider(
+    `.cycles__cards[data-index="${index}"]`,
+    `.cycles__cards[data-index="${index}"] .cycles__pagination`,
+    1000
+  );
+  goodSlider.init();
 });

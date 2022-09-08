@@ -33,7 +33,7 @@ const UI_SELECTORS = {
   SECTION: ".cycles",
   TAB_BTN_ACTIVE: ".cycles__filter_active",
   TAB_CONTENT_ACTIVE: ".cycles__cards_active",
-	SELECT_FILTER: "#cycles__filters"
+  SELECT_FILTER: "#cycles__filters",
 };
 
 const UI_CLASSES = {
@@ -53,7 +53,7 @@ const formValidate = new Validate(form, {
 
 const themeElements = document.querySelectorAll("[data-theme='themeMod']");
 
-const switcher = document.querySelector(".switcher__btn");
+const switchers = document.querySelectorAll(".switcher__btn");
 
 const burger = new Burger({
   headerSel: ".header",
@@ -65,13 +65,13 @@ const burger = new Burger({
 
 export {
   photoSlider,
-//	goodsSlider,
+  //	goodsSlider,
   fadeInUpArray,
   fadeInArray,
   parallaxHeroConfig,
   tabs,
   formValidate,
   themeElements,
-  switcher,
+  switchers,
   burger,
 };

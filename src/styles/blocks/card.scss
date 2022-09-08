@@ -1,38 +1,87 @@
 .card {
-	display: flex;
-	flex-direction: column;
-	row-gap: rez(22);
+  display: flex;
+  flex-direction: column;
+  row-gap: rez(22);
 
-	&:hover .card__name {
-		opacity: .75;
-	}
-	&__img-box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: rez(20);
-		overflow: hidden;
-		aspect-ratio: 1/1;
-		border-radius: 20px;
-		text-decoration: none;
-		background-color: $bg;
-		filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
-		&:hover {
-			filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
-		}
-		&.darkmode {
-			&:hover {
-				filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.55));
-			}
-		}
-	}
-	&__img {
-		object-fit: cover;
-		object-position: center;
-		transition: transform .5s ease;
-	}
-	&__name {
-		line-height: rez(22);
-		font-weight: 500;
-	}
+  @include media-l {
+    row-gap: rez-l(22);
+  }
+
+  @include media-t {
+    border-radius: 20px;
+    row-gap: rez-t(3);
+    background-color: $bg;
+		padding-bottom: rez-t(16);
+		text-align: center;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+
+    &:hover {
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
+    }
+    &.darkmode {
+      &:hover {
+        filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.55));
+      }
+    }
+  }
+  @include media-m {
+    row-gap: rez-m(3);
+		padding-bottom: rez-m(15);
+  }
+
+  &:hover .card__name {
+    opacity: 0.75;
+  }
+
+  &__img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rez(20);
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: $bg;
+    filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.06));
+
+    &:hover {
+      filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.11));
+    }
+    &.darkmode {
+      &:hover {
+        filter: drop-shadow(0px 20px 140px rgba(0, 0, 0, 0.55));
+      }
+    }
+
+    @include media-l {
+      padding: rez-l(20);
+    }
+
+    @include media-t {
+      padding: rez-t(16) rez-t(16) 0;
+      filter: none;
+      &:hover {
+        filter: none;
+      }
+      &.darkmode {
+        &:hover {
+          filter: none;
+        }
+      }
+    }
+
+    @include media-m {
+      padding: rez-t(15) rez-t(15) 0;
+    }
+  }
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+  }
+  &__name {
+    line-height: calc(22 / 18);
+    font-weight: 500;
+  }
 }

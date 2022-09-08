@@ -71,10 +71,13 @@
   font-size: rez(18);
   line-height: 1;
   @include media-l {
+		font-size: rez-l(18);
   }
   @include media-t {
+		font-size: rez-t(16);
   }
   @include media-m {
+		font-size: rez-m(14);
   }
 }
 
