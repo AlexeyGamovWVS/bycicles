@@ -41,3 +41,20 @@
   transform: translateZ(0);
   backface-visibility: hidden;
 }
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: $grayC7;
+  border-radius: 100px;
+  display: inline-block;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $black15;
+}

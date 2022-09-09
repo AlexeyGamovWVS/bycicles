@@ -4,19 +4,61 @@
 		max-width: unset;
 		padding-top: rez(60);
 		padding-bottom: rez(60);
+		padding-right: 0;
+		@include media-l {
+			margin-left: calc((100% - rez-l(768)) / 2);
+			padding-top: rez-l(60);
+			padding-bottom: rez-l(60);
+		}
+		@include media-t {
+			position: relative;
+			margin-left: 0;
+			padding-top: rez-t(40);
+			padding-bottom: rez-t(40);
+			padding-right: rez-t(20);
+		}
+		@include media-m {
+			padding-top: rez-m(40);
+			padding-bottom: rez-m(40);
+			padding-right: rez-m(10);
+		}
 	}
 
-	&__text-slider {
-		margin-bottom: rez(40);
+	&__corusel-slide {
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__title {
 		margin-bottom: rez(20);
-		max-width: rez(460);
+		max-width: 50%;
+		@include media-l {
+			margin-bottom: rez-l(20);
+			max-width: 100%;
+		}
+		@include media-t {
+			margin-bottom: rez-t(40);
+		}
+		@include media-m {
+			margin-bottom: rez-m(40);
+		}
 	}
 
 	&__subtitle {
 		max-width: rez(460);
+		margin-bottom: rez(40);
+		@include media-l {
+			margin-bottom: rez-l(20);
+			max-width: 100%;
+		}
+		@include media-t {
+			margin-top: rez-t(40);
+			margin-bottom: 0;
+			order: 2;
+		}
+		@include media-m {
+			margin-top: rez-m(40);
+		}
 	}
 
 	&__image {
@@ -25,6 +67,9 @@
 		transition: transform 0.3s ease;
 		&:hover {
 			transform: scale(1.2);
+		}
+		@include media-t {
+			order: 1;
 		}
 	}
 
@@ -46,6 +91,22 @@
 		visibility: hidden;
 		opacity: 0;
 
+		@include media-l {
+			bottom: rez-l(16);
+			width: rez-l(100);
+			height: rez-l(40);
+		}
+		@include media-t {
+			bottom: rez-t(14);
+			width: rez-t(70);
+			height: rez-t(28);
+		}
+		@include media-m {
+			bottom: rez-m(14);
+			width: rez-m(70);
+			height: rez-m(28);
+		}
+
 		&_place {
 			&_shosse {
 				background-image: url(../../images/shosse-badge.svg);
@@ -64,6 +125,23 @@
 		display: flex;
 		flex-direction: row;
 		column-gap: rez(20);
+		@include media-l {
+			margin-top: rez-l(20);
+			column-gap: rez-l(20);
+		}
+		@include media-t {
+			margin-top: 0;
+			position: absolute;
+			z-index: 1;
+			column-gap: rez-t(10);
+			right: rez-t(20);
+			top: rez-t(47);
+		}
+		@include media-m {
+			top: rez-m(47);
+			right: rez-m(10);
+			column-gap: rez-m(10);
+		}
 	}
 
 	&__button {
@@ -74,9 +152,20 @@
 		background-color: $grayEB;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: rez(16) rez(16);
+		background-size: auto rez(16);
 		cursor: pointer;
-
+		@include media-l {
+			width: rez-l(50);
+			background-size: auto rez-l(16);
+		}
+		@include media-t {
+			width: rez-t(24);
+			background-size: auto rez-t(10);
+		}
+		@include media-m {
+			width: rez-m(24);
+			background-size: auto rez-m(10);
+		}
 		&_type {
 			&_prev {
 				background-image: url(../../images/arrow-left.svg);
@@ -106,11 +195,30 @@
 	opacity: 1;
 }
 
-.roads__text-wrapper.darkmode .roads__title {
+.roads__corusel-wrapper.darkmode .roads__title {
 	color: white;
 }
 
-.roads__text-wrapper.darkmode .roads__subtitle {
+.roads__corusel-wrapper.darkmode .roads__subtitle {
 	color: $whiteE5;
+}
+
+.swiper-slide .roads__title, .swiper-slide-duplicate .roads__title{
+	opacity: 0;
+	transition: opacity .3s ease;
+
+}
+
+.swiper-slide .roads__subtitle, .swiper-slide-duplicate .roads__subtitle{
+	opacity: 0;
+	transition: opacity .3s ease;
+}
+
+.swiper-slide-active .roads__title, .swiper-slide-duplicate-active .roads__title{
+	opacity: 1;
+}
+
+.swiper-slide-active .roads__subtitle, .swiper-slide-duplicate-active .roads__subtitle{
+	opacity: 1;
 }
 

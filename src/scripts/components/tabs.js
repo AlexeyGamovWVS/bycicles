@@ -22,6 +22,7 @@ export class Tabs {
 		this._activeTabContent = this._tabRow.querySelector(
 			this._selectors.TAB_CONTENT_ACTIVE
 		);
+		this._selectFilter = this._tabRow.querySelector(this._selectors.SELECT_FILTER)
 	}
 
 	_setAttributes() {
@@ -34,8 +35,24 @@ export class Tabs {
 	}
 
 	_setListeners() {
+		this._setTabBtnsListener();
+		this._setSelectListener();
+	}
+
+	_setTabBtnsListener() {
 		this._tabRow.addEventListener("click", (e) => {
 			const target = e.target.closest(this._selectors.TAB_BUTTON);
+			if (target) {
+				e.preventDefault();
+				this._setActiveTab(target);
+			}
+		});
+	}
+
+	_setSelectListener() {
+		this._selectFilter.addEventListener("input", (e)=>{
+			const filterIndex = this._selectFilter.options.selectedIndex;
+			const target = this._contents[filterIndex];
 			if (target) {
 				e.preventDefault();
 				this._setActiveTab(target);

@@ -12,8 +12,8 @@ export function setParallaxEffect({ triggerSelector, start, end }) {
 				trigger: triggerSelector,
 				start: start,
 				end: end,
-				markers: true,
-				scrub: true,
+				markers: false,
+				scrub: false,
 				pin: true,
 			},
 		});
@@ -25,8 +25,8 @@ export function setParallaxEffect({ triggerSelector, start, end }) {
 				trigger: triggerSelector,
 				start: "-20px center",
 				end: "20px center",
-				markers: true,
-				scrub: true,
+				markers: false,
+				scrub: false,
 				pin: true,
 			},
 		});

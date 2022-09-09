@@ -27,13 +27,22 @@ export class Slider {
 			rewind: false,
 			loop: true,
 			modules: [Navigation],
-			spaceBetween: 40,
-			slidesPerView: this._amountSlides,
 			navigation: {
 				nextEl: this._btnNext,
 				prevEl: this._btnPrev,
 			},
 			init: false,
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				960: {
+					spaceBetween: 40,
+					slidesPerView: this._amountSlides,
+				}
+			},
+			grabCursor: true,
 		};
 	}
 }

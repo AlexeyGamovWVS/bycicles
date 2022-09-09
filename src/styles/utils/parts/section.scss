@@ -1,0 +1,15 @@
+.section {
+	overflow: hidden;
+  &__divider {
+    display: none;
+    @include media-t {
+      display: block;
+      margin: rez-t(40) rez-t(20) 0;
+      height: 1px;
+      background-color: $grayE3;
+    }
+    @include media-m {
+      margin: rez-m(40) rez-m(10) 0;
+    }
+  }
+}

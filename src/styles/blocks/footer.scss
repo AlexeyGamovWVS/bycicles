@@ -1,35 +1,89 @@
+@keyframes rotationAnimation {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
 .footer {
-	background-color: $grayEF;
-	&.darkmode {
-		background-color: $black2f;
-	}
-	&__container {
-		padding-top: rez(80);
-		padding-bottom: rez(60);
-	}
-	&__form-container {
-		margin-bottom: rez(100);
-	}
-	&__form {
-		display: flex;
-		flex-direction: column;
-		row-gap: rez(50);
-		max-width: rez(360);
-	}
-	&__last-row {
-		margin-top: rez(86);
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-end;
-	}
-	&__copyright {
-		font-weight: 600;
-		color: $grayCF;
-	}
-	&__switcher {
+  background-color: $grayEF;
+  &.darkmode {
+    background-color: $black2f;
+  }
+  &__container {
+    padding-top: rez(80);
+    padding-bottom: rez(60);
+		@include media-l {
+			padding-top: rez-l(80);
+			padding-bottom: rez-l(60);
+		}
+		@include media-t {
+			padding-top: rez-t(60);
+			padding-bottom: rez-t(60);
+		}
 		@include media-m {
-			display: none;
+			padding-top: rez-m(60);
+			padding-bottom: rez-m(16);
+		}
+  }
+  &__form-container {
+    margin-bottom: rez(100);
+		@include media-l {
+			margin-bottom: rez-l(100);
+		}
+		@include media-t {
+			margin-bottom: rez-t(100);
+		}
+		@include media-m {
+			margin-bottom: rez-m(100);
+		}
+  }
+	&__form {
+		max-width: rez(360);
+		@include media-l {
+			max-width: rez-l(360);
+		}
+		@include media-t {
+			max-width: rez-t(300);
+		}
+		@include media-m {
+			max-width: rez-m(300);
 		}
 	}
+  &__last-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+		@include media-t {
+			align-items: center;
+		}
+  }
+  &__copyright {
+    font-weight: 600;
+    color: $grayCF;
+  }
+  &__switcher {
+    @include media-m {
+      display: none;
+    }
+  }
+
+  &__site-icon {
+    display: none;
+    @include media-m {
+			animation: rotationAnimation 10s linear infinite;
+      display: block;
+      width: rez-m(38);
+      aspect-ratio: 1/1;
+      background-image: url(../../images/footer-icon.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.darkmode {
+      background-image: url(../../images/footer-icon-white.svg);
+    }
+  }
 }
