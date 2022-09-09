@@ -3,12 +3,12 @@
     display: none;
     @include media-t {
       display: block;
-      margin-top: rez-t(40);
+      margin: rez-t(40) rez-t(20) 0;
       height: 1px;
       background-color: $grayE3;
     }
     @include media-m {
-      margin-top: rez-m(40);
+      margin: rez-m(40) rez-m(10) 0;
     }
   }
 }
