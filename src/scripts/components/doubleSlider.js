@@ -41,7 +41,8 @@ export class Slider {
 					spaceBetween: 40,
 					slidesPerView: this._amountSlides,
 				}
-			}
+			},
+			grabCursor: true,
 		};
 	}
 }

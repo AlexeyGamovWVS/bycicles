@@ -43,10 +43,13 @@
   font-size: rez(14);
   line-height: calc(20 / 14);
   @include media-l {
+		font-size: rez-l(14);
   }
   @include media-t {
+		font-size: rez-t(14);
   }
   @include media-m {
+		font-size: rez-m(14);
   }
 }
 
